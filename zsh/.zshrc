@@ -32,7 +32,8 @@ export JDK_JAVA_OPTIONS='--add-exports java.base/sun.nio.ch=ALL-UNNAMED --add-ex
 export PATH=$HOME/Tools/neo4j/bin:$PATH
 
 ## Python ##
-export PATH=$HOME"/.local/bin:$PATH"
+export PATH=$PATH:/sbin
+export PATH=$PATH:$HOME"/.local/bin"
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
