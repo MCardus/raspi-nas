@@ -15,7 +15,7 @@ source $ZSH/oh-my-zsh.sh
 #source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 ## Windows conf ##
-#export WIN_PATH='/mnt/c/Users/Marc.CardusGarcia'
+#export WIN_PATH='/mnt/c/Users/<User>'
 
 ## SPARK ##
 # Enable for datamesh only #export SPARK_HOME=$HOME/Tools/spark-3.3.0-bin-hadoop3
@@ -32,9 +32,12 @@ export JDK_JAVA_OPTIONS='--add-exports java.base/sun.nio.ch=ALL-UNNAMED --add-ex
 export PATH=$HOME/Tools/neo4j/bin:$PATH
 
 ## Python ##
-#export PATH=$HOME"/.local/bin:$PATH"
-#eval "$(pyenv virtualenv-init -)"
-#eval "$(pyenv init -)"
+export PATH=$HOME"/.local/bin:$PATH"
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
 
 ## Scala ##
 alias toree='docker run -v $(pwd):/home/jovyan/work -p 8888:8888 -d jupyter/all-spark-notebook && sleep 2 && docker logs $(docker ps -lq)'
