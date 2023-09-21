@@ -9,4 +9,5 @@ sudo apt-get install -y bluez libffi-dev libssl-dev libjpeg-dev zlib1g-dev autoc
 sudo useradd -rm homeassistant -G dialout,gpio,i2c
 pip3 install homeassistant
 cat systemcmd.txt >/etc/systemd/system/home-assistant@$(whoami).service
+sudo systemctl --system daemon-reload
 sudo systemctl start home-assistant@$(whoami).service
