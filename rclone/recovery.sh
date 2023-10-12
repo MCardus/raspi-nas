@@ -3,10 +3,10 @@ REMOTE_NAME=OneDrive
 REMOTE_DIR=$REMOTE_NAME:Apps/rclone-raspi
 
 #download backup file
-sudo rclone copyto $(REMOTE_DIR)/backup.tar.gz /backup.tar.gz --config /home/marcus/.config/rclone/rclone.conf
+sudo rclone copyto $REMOTE_DIR/backup.tar.gz /backup.tar.gz --config /home/$(whoami)/.config/rclone/rclone.conf
 
 #unpack all data
-sudo tar -xvf /backup.tar.gz /
+sudo tar -xvf /backup.tar.gz -C /
 
 #restore list of packages
 sudo apt-key add /backup/packages/Repo.keys
@@ -19,3 +19,4 @@ sudo apt-get dselect-upgrade -y
 
 # remove tmp dir
 sudo rm -r /backup
+sudo rm -r /backup.tar.gz
