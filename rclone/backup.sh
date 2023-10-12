@@ -1,6 +1,6 @@
 # Script Conf
 export REMOTE_NAME=OneDrive
-export REMOTE_DIR=$REMOTE_NAME:Apps/rclone-raspi
+export REMOTE_DIR=${REMOTE_NAME}:Apps/rclone-raspi
 
 
 #re-create a backup directory
@@ -19,10 +19,12 @@ apt-key exportall > /backup/packages/Repo.keys
 sudo tar -czf /backup/backup.tar.gz /home /etc /usr/local/etc /backup/packages
 
 #send to the cloud
-rclone copyto /backup/backup.tar.gz $REMOTE_DIR/backup.tar.gz
+export TODAY_DATE=$(date '+%Y-%m-%d')
+rclone copyto /backup/backup.tar.gz $REMOTE_DIR/backup-$TODAY_DATE.tar.gz
+rclone copyto $REMOTE_DIR/backup-$TODAY_DATE.tar.gz $REMOTE_DIR/backup-latest.tar.gz
 
 #delete old backups
-rclone delete $REMOTE_DIR/backup.tar.gz --min-age 7d
+rclone delete $REMOTE_DIR --min-age 1M
 
 #delete the temporary directory
 sudo rm -r /backup
