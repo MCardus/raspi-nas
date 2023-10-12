@@ -1,6 +1,6 @@
 [Unit]
 Description=Rclone backup
-After=network-online.target
+After=multi-user.target
 StartLimitInterval=200
 StartLimitBurst=5
 
@@ -8,9 +8,9 @@ StartLimitBurst=5
 Type=simple
 User=%i
 WorkingDirectory=/home/%i/rclone
-ExecStart=/home/%i/rclone/backup.sh
+ExecStart=/bin/sh /home/%i/rclone/backup.sh
 Restart=always
 RestartSec=30
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=default.target
