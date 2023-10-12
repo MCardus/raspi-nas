@@ -16,7 +16,7 @@ cp -R /etc/apt/sources.list* /backup/packages/
 apt-key exportall > /backup/packages/Repo.keys
 
 #compress directories
-sudo tar -czf /backup/backup.tar.gz /home /etc /usr/local/etc /backup/packages
+sudo tar -czf /backup/backup.tar.gz /home /etc /usr/local/etc /backup/packages /var/lib/docker/volumes/
 
 #send to the cloud
 export TODAY_DATE=$(date '+%Y-%m-%d')
