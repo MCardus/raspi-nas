@@ -2,7 +2,7 @@
 Description="Run rclone@$(whoami).service weekly every Monday at 12am"
 
 [Timer]
-OnCalendar=weekly
+OnCalendar=daily
 Unit=rclone@marcus.service
 
 [Install]

@@ -25,7 +25,7 @@ rclone copyto /backup/backup.tar.gz $REMOTE_DIR/backup-$TODAY_DATE.tar.gz
 #rclone copyto $REMOTE_DIR/backup-$TODAY_DATE.tar.gz $REMOTE_DIR/backup-latest.tar.gz
 
 #delete old backups
-rclone delete $REMOTE_DIR --min-age 1M
+rclone delete $REMOTE_DIR --min-age 4d
 
 #delete the temporary directory
 sudo rm -r /backup
