@@ -11,4 +11,4 @@ sh raspi-nas/python/install.sh
 sh raspi-nas/homeassistant/install.sh
 sh raspi-nas/zsh/install.sh
 sh raspi-nas/docker/install.sh
-sh raspi-nas/rclone/install.sh
+sh raspi-nas/rclone/schedule.sh
