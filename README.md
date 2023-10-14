@@ -6,7 +6,4 @@ Raspi nas utils code
 * Then run the main entry point main.sh
 
 # How to back up your raspi
-* Use the systemcl rclone@$(whoami).service
-
-# How to recover a backup
-* Use the recovery script rclone/recovery.sh
+Take a look at [the back ups docs](rclone/README.md) using rclone

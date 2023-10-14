@@ -1,0 +1,1 @@
+# DHCP conf to have an static IP address
