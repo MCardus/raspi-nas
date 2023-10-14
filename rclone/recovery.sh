@@ -26,7 +26,7 @@ sudo apt-get dselect-upgrade -y
 # remove tmp dir
 echo Cleaning tmp files
 sudo rm -r /backup
-sudo rm -r /$back_up_file
+sudo rm -r /backup.tar.gz
 
 echo Restarting now
 sudo systemctl start reboot.target
