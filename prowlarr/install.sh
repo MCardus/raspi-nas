@@ -1,0 +1,1 @@
+sudo sh -c "$(wget -qO- https://raw.githubusercontent.com/pijarr/pijarr/master/setup.sh)"
