@@ -1,5 +1,5 @@
 [Unit]
-Description="Run rclone@$(whoami).service weekly every Monday at 12am"
+Description="Run rclone@$(whoami).service"
 
 [Timer]
 OnCalendar=daily

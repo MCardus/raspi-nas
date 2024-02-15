@@ -1,0 +1,10 @@
+[Unit]
+Description=Restart machine
+
+[Service]
+Type=simple
+User=%i
+ExecStart=/usr/bin/sudo /sbin/reboot now
+
+[Install]
+WantedBy=default.target

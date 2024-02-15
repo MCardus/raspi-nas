@@ -1,0 +1,1 @@
+sudo systemctl enable restart@marcus.timer

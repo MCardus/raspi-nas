@@ -1,0 +1,8 @@
+[Unit]
+Description="Restart machine"
+
+[Timer]
+OnCalendar=Sun *-*-* 05:00:00
+
+[Install]
+WantedBy=timers.target

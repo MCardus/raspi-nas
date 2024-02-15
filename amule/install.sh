@@ -1,5 +1,6 @@
 sudo apt-get install amule amule-daemon
-sudo adduser amule
+sudo useradd -m amule
+sudo passwd amule
 echo \
 """# Configuration for /etc/init.d/amule-daemon
 
