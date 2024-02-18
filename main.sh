@@ -16,3 +16,4 @@ sh raspi-nas/prowlarr/install.sh
 sh raspi-nas/cups/install.sh
 sh raspi-nas/zerotier/install.sh
 sh raspi-nas/amule/install.sh
+sh raspi-nas/amule/cockpit.sh
